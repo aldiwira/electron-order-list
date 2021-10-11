@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useReducer } from 'react';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
+import { Context, initialState, reducer } from './store';
+import { routes } from './config';
 
-function App() {
+const renderRoutes = () => {
+  return routes.map((val) => {
+    return (
+      <Route exact key={val.name} path={val.path} component={val.component} />
+    );
+  });
+};
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{ state, dispatch }}>
+      <Router>
+        <Switch>{renderRoutes()}</Switch>
+      </Router>
+    </Context.Provider>
   );
-}
+};
 
 export default App;

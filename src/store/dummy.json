@@ -1,0 +1,68 @@
+{
+  "users": {
+    "username": "aldi",
+    "password": "password"
+  },
+  "orders": [
+    {
+      "id": 1,
+      "room": "123",
+      "items": "Nasi Goreng",
+      "jumlah": 3,
+      "modifier": "pedas",
+      "notes": "Jangan pakai sayur",
+      "status": "diterima",
+      "createdAt": "2021-04-18T14:34:43Z"
+    },
+    {
+      "id": 2,
+      "room": "817",
+      "items": "Mie Goreng",
+      "jumlah": 1,
+      "modifier": "Tidak pedas",
+      "notes": "tidak direbus",
+      "status": "diterima",
+      "createdAt": "2021-04-18T14:30:43Z"
+    },
+    {
+      "id": 3,
+      "room": "562",
+      "items": "Krengsengan",
+      "jumlah": 2,
+      "modifier": "",
+      "notes": "jangan pedas banget",
+      "status": "diterima",
+      "createdAt": "2021-04-18T14:24:43Z"
+    },
+    {
+      "id": 4,
+      "room": "923",
+      "items": "Nasi Gule",
+      "jumlah": 1,
+      "modifier": "Extra nasi",
+      "notes": "pedas banget",
+      "status": "diterima",
+      "createdAt": "2021-04-18T14:24:43Z"
+    },
+    {
+      "id": 5,
+      "room": "452",
+      "items": "Nasi Pecel",
+      "jumlah": 1,
+      "modifier": "Extra nasi",
+      "notes": "pedas banget",
+      "status": "diantarkan",
+      "createdAt": "2021-04-18T14:21:43Z"
+    },
+    {
+      "id": 6,
+      "room": "452",
+      "items": "Nasi Gudeg",
+      "jumlah": 2,
+      "modifier": "Extra Telur",
+      "notes": "pedas banget",
+      "status": "dibuat",
+      "createdAt": "2021-04-18T14:10:43Z"
+    }
+  ]
+}

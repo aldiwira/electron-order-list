@@ -1,0 +1,11 @@
+directories:
+  output: dist
+  buildResources: ./public
+appId: com.aldiwira.travling
+extends: null
+files:
+  - filter:
+      - ./build/**/*
+      - ./main/main.js
+      - ./src/**/*
+electronVersion: 15.1.2
