@@ -11,7 +11,6 @@
     "@testing-library/user-event": "^12.1.10",
     "audit": "^0.0.6",
     "electron-is-dev": "^2.0.0",
-    "electron-packager": "^15.4.0",
     "fix": "^0.0.6",
     "node-sass": "^6.0.1",
     "path": "^0.12.7",
@@ -26,7 +25,8 @@
   },
   "devDependencies": {
     "electron": "^15.1.2",
-    "electron-builder": "^22.13.1"
+    "electron-builder": "^22.10.5",
+    "electron-packager": "^15.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -60,12 +60,14 @@
     "extends": null,
     "files": [
       "./build/**/*",
-      "./main/main.js",
-      "./src/**/*"
+      "./public/main.js"
     ],
-    "directories": {
-      "buildResources": "./public"
+    "win": {
+      "target": "portable"
+    },
+    "portable": {
+      "unicode": false,
+      "artifactName": "my_electron_app.exe"
     }
-    
   }
 }
